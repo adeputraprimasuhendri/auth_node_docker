@@ -6,6 +6,5 @@ services:
     build: . 
     volumes:
       - .:/app
-      - ./node_modules
     ports: 
       - "8080:3000"
