@@ -3,7 +3,7 @@ services:
   node:
     container_name: NODE_SERVER
     restart: always
-    build: ./node.dokcerfile 
+    build: . 
     volumes:
       - .:/app
       - ./node_modules
