@@ -25,3 +25,4 @@ app.use('/user', RouteUser);
 app.use('/auth', RouteAuth);
 
 app.listen(PORT, HOST);
+console.log("SERVER RUN ON PORT : " + PORT);
