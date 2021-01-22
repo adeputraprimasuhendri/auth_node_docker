@@ -9,6 +9,9 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install
+
+RUN npm install express nodemon mysql jsonwebtoken body-parser cors bcrypt dotenv
+
 # If you are building your code for production
 # RUN npm ci --only=production
 
