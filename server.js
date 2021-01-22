@@ -15,11 +15,13 @@ app.use(cors());
 app.use(BodyParser.json());
 
 const RouteUser = require('./routes/RouteUser');
+const RouteAuth = require('./routes/RouteAuth');
 
 // Route
 app.get('/', (req, res) => {
     res.send('NodeJs on Docker');
   });
 app.use('/user', RouteUser);
+app.use('/auth', RouteAuth);
 
 app.listen(PORT, HOST);
