@@ -8,3 +8,17 @@ services:
       - .:/app
     ports: 
       - "8080:3000"
+    links:
+      - database
+    environment:
+      DB_PORT: 3306
+      DB_HOST: database
+
+  database:
+    container_name: DB_MYSQL
+    image: mariadb
+    environment:
+        MYSQL_ROOT_PASSWORD: MYSQL_PASSWORD
+        MYSQL_DATABASE: MYSQL_DATABASE_NAME
+    ports:
+        - "3306"
